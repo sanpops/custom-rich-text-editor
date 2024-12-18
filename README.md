@@ -17,9 +17,10 @@ This project is a lightweight and customizable rich text editor built using **HT
 ## Folder Structure
 /project-folder
 ├── index.html
+
 ├── editor.css
-├── editor.js
-└── assets/
+
+└── editor.js
 
 ## Usage
 1. Clone this repository:
