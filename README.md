@@ -26,7 +26,7 @@ This project is a lightweight and customizable rich text editor built using **HT
 ## Usage
 1. Clone this repository:
 
-git clone https://github.com/sanpops/custom-rich-text-editor
+   git clone https://github.com/sanpops/custom-rich-text-editor
 
 2. Open `index.html` in your browser.
 3. Use the editor toolbar to format text, edit raw HTML, or preview the content.
