@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.editor-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.toolbar {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.editor-wrapper {
+    border: 1px solid #ccc;
+    min-height: 300px;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+#editor {
+    min-height: 300px;
+    background: #fff;
+    outline: none; /* Remove the default focus outline */
+}
+
+#code-view {
+    width: 100%;
+    height: 300px;
+}
+
+button {
+    margin: 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button i {
+    pointer-events: none;
+}
+
+select, input[type="color"] {
+    margin: 2px;
+    font-size: 16px;
+}
+
+.display-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+#display-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+}
+
+/* Specific styles for the Preview button */
+.preview-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    width: auto;
+}
+
+.preview-button:hover {
+    background-color: #333;
+}

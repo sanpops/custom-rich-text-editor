@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Editor</title>
+    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="editor-container">
+        <div class="toolbar">
+            <button title="Bold" onclick="execCmd('bold')"><i class="fas fa-bold"></i></button>
+            <button title="Italic" onclick="execCmd('italic')"><i class="fas fa-italic"></i></button>
+            <button title="Underline" onclick="execCmd('underline')"><i class="fas fa-underline"></i></button>
+            <button title="Strikethrough" onclick="execCmd('strikeThrough')"><i class="fas fa-strikethrough"></i></button>
+            <select title="Font" onchange="execCmd('fontName', this.value)">
+                <option value="Arial">Arial</option>
+                <option value="Courier">Courier</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+            </select>
+            <select title="Style" onchange="execCmd('formatBlock', this.value)">
+                <option value="p">Normal</option>
+                <option value="h1">Heading 1</option>
+                <option value="h2">Heading 2</option>
+                <option value="h3">Heading 3</option>
+                <option value="h4">Heading 4</option>
+                <option value="h5">Heading 5</option>
+                <option value="h6">Heading 6</option>
+            </select>
+            <input type="color" title="Font Color" onchange="execCmd('foreColor', this.value)">
+            <button title="Bullets" onclick="execCmd('insertUnorderedList')"><i class="fas fa-list-ul"></i></button>
+            <button title="Numbering" onclick="execCmd('insertOrderedList')"><i class="fas fa-list-ol"></i></button>
+            <button title="Align Left" onclick="execCmd('justifyLeft')"><i class="fas fa-align-left"></i></button>
+            <button title="Align Center" onclick="execCmd('justifyCenter')"><i class="fas fa-align-center"></i></button>
+            <button title="Align Right" onclick="execCmd('justifyRight')"><i class="fas fa-align-right"></i></button>
+            <button title="Justify" onclick="execCmd('justifyFull')"><i class="fas fa-align-justify"></i></button>
+            <button title="Insert Link" onclick="execCmd('createLink', prompt('Enter URL:', 'http://'))"><i class="fas fa-link"></i></button>
+            <button title="Insert Image" onclick="execCmd('insertImage', prompt('Enter image URL:', 'http://'))"><i class="fas fa-image"></i></button>
+            <button title="Code View" onclick="toggleCodeView()"><i class="fas fa-code"></i></button>
+        </div>
+        <div class="editor-wrapper">
+            <div id="editor" contenteditable="true"></div>
+            <textarea id="code-view" style="display:none;"></textarea>
+        </div>
+        <button class="preview-button" onclick="prepareContentForSave()">Preview</button>
+        <input type="hidden" name="content" id="hidden-content">
+    </div>
+
+    <div class="display-container">
+        <h2>Content Preview</h2>
+        <div id="display-content"></div>
+    </div>
+
+    <script src="editor.js"></script>
+</body>
+</html>
